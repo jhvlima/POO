@@ -60,6 +60,11 @@ public class Main
         
         Time vasco = new Time("Vasco");
         Partida p = new Partida(flamengo, vasco);
+        
+        System.out.print("Parida: ");
+        System.out.print(p.getTimeA().retornaNome());
+        System.out.print(" X ");
+        System.out.println(p.getTimeB().retornaNome());
 
     }
 }
