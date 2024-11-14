@@ -7,12 +7,12 @@ public class Main {
         Pessoa paulinho = new Pessoa("José");
         Pessoa dete = new Pessoa("Odete");
 
-        Pessoa taide = new Pessoa("Ataide", gatao, oladina);
+        Pessoa gatinho = new Pessoa("Ataide", gatao, oladina);
         Pessoa ze = new Pessoa("Zenaide", paulinho, dete);
 
-        Pessoa mane = new Pessoa("Pedro", taide, ze);
-        Pessoa eu = new Pessoa("João", taide, ze);
-
+        Pessoa mane = new Pessoa("Pedro", gatinho, ze);
+        Pessoa eu = new Pessoa("João", gatinho, ze);
+        
         System.out.print("          ");
         System.out.println(eu.getNome());
         System.out.println("        /        \\");
@@ -27,9 +27,18 @@ public class Main {
         System.out.print("  ");
         System.out.print(eu.getAvoMaterno().getNome());
         System.out.print("  ");
-        System.out.print(eu.getAvohMaterno().getNome());
-
-
+        System.out.println(eu.getAvohMaterno().getNome());
+  
+        System.out.println("# Avós #");
+        for(Pessoa p : eu.getAvos())
+        {
+            System.out.println(p.getNome());
+        }
         
+        System.out.println("# Parentes #");
+        for(Pessoa p : eu.getParentes())
+        {
+            System.out.println(p.getNome());
+        }
     }
 }

@@ -59,4 +59,22 @@ public class Pessoa {
         if (this.getAvoParteno() != null) pessoas.add(this.getAvoParteno());
         return pessoas;
     }
+    
+    public java.util.Set<Pessoa> getParentes()
+    {
+        java.util.Set<Pessoa> pessoas = new java.util.HashSet<Pessoa>();
+        if (this.getMae() != null) 
+        {
+            pessoas.add(this.getMae());
+            pessoas.addAll(this.getMae().getParentes());
+        }
+            
+        if (this.getPai() != null) 
+        {
+            pessoas.add(this.getPai());
+            pessoas.addAll(this.getPai().getParentes());
+        }
+        return pessoas;
+    }
+
 }
