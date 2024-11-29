@@ -1,6 +1,7 @@
 public abstract class Funcionario {
     private String nome;
     private float salario;
+    private Departamento dp;
 
     @Override
     public String toString() {

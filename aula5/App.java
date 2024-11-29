@@ -1,8 +1,9 @@
 /**
  * Atividade no laboratório:
  * 
- * Crie classes Empresa, Departamento, Funcionario, 
- * FuncionarioTempoIntegral e FuncionarioTempoParcial compatíveis com a classe App fornecida.
+ * Crie classes Empresa, Departamento, Funcionario,
+ * FuncionarioTempoIntegral e FuncionarioTempoParcial compatíveis com a classe
+ * App fornecida.
  * 
  */
 
@@ -19,19 +20,17 @@ public class App {
 
         Funcionario maria = new FuncionarioTempoIntegral("Maria", 12000.0f);
         rh.addFuncionario(maria);
-        Funcionario pedro =  new FuncionarioTempoIntegral("Pedro", 9000.0f); 
+        Funcionario pedro = new FuncionarioTempoIntegral("Pedro", 9000.0f);
         rh.addFuncionario(pedro);
 
         FuncionarioTempoParcial joao = new FuncionarioTempoParcial("João", 10000.0f);
         joao.setNumeroHorasSemanais(30);
         rh.addFuncionario(joao);
 
-        for (Departamento d : cocaCola.getDepartamentos())
-        {
+        for (Departamento d : cocaCola.getDepartamentos()) {
             System.out.println(d.getNome());
             System.out.println(d.getMediaSalarial());
-            for (Funcionario f : d.getFuncionarios())
-            {
+            for (Funcionario f : d.getFuncionarios()) {
                 System.out.println(f);
             }
         }
