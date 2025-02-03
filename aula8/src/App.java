@@ -7,15 +7,17 @@
  */
 
 import java.io.*;  
-import java.util.Scanner;  
-import java.util.List;  
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Comparator;
 
 public class App {
-    public static void main(String[] args) {
-        Scanner scanLinhas = new Scanner(new File("F:\\input.csv"), "UTF-8");
+    public static void main(String[] args) throws IOException {
+        Scanner scanLinhas = new Scanner(new File("input.csv"), "UTF-8");
         String linha = "";
 
-        List lista<Pessaoa> = new ArrayList()<Pessoa>; 
+        List<Pessoa> lista = new ArrayList<Pessoa>(); 
 
         while(scanLinhas.hasNextLine())
         {
@@ -27,7 +29,18 @@ public class App {
         }
         scanLinhas.close(); 
     
+        lista.sort(new NotaComparator());
+        System.out.println("Lista de Pessoas Por Nota");
+        for(Pessoa p : lista)
+        {
+            System.out.println(p);
+        }
+    }
+}
 
-    
+class NotaComparator implements Comparator<Pessoa> {
+    @Override
+    public int compare(Pessoa o1, Pessoa o2) {
+        return o2.getNota() - o1.getNota();
     }
 }
