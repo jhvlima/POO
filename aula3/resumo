@@ -1,5 +1,0 @@
-javac Main.java 
-javac *.java
-java Main 
-
-Na aula 3 foi feito até o getAvos(), na aula 4 foi adicionado a funcao getParentes(),

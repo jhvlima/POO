@@ -1,0 +1,9 @@
+# compilar o arquivo Main.java usando o compilador javac para o executável java.class 
+javac Main.java 
+javac *.java
+
+# executa do arquivo Main.class usando o intepretador (maquina virtual) Java 
+java Main 
+
+
+Função em C = Método em Java
