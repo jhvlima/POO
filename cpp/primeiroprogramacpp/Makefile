@@ -1,4 +1,6 @@
-all: pessoa.o main.o pessoa.hpp
+all: main
+
+main: pessoa.o main.o
 	g++ -o main pessoa.o main.o
 
 pessoa.o: pessoa.cpp pessoa.hpp
@@ -7,5 +9,6 @@ pessoa.o: pessoa.cpp pessoa.hpp
 main.o: main.cpp pessoa.hpp
 	g++ -c -o main.o main.cpp
 
-clean: 
-	rm -f *.o
+clean:
+	rm *.o
+	rm main

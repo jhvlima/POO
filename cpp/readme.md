@@ -30,3 +30,8 @@ int main()
     inrementa(valor); // valor == 1
 }
 ```
+## Inline
+
+## Containers e Templetes
+array[i] é uma sobrecarga que cham uma função, diferente de C, não é feito de offset 
+
