@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main{
+int main(){
     map<int, Departamento*> departamentos;
     Departamento *d1 = new Departamento("dep1", 1);
     Departamento *d2 = new Departamento("dep2", 2);
@@ -16,7 +16,9 @@ int main{
 
     for(pair<int,Departamento*> mapPair: departamentos)
     {
-        cout << mapPair.second->getNome();
+        cout << mapPair.second->getNome() << endl;
     }
+
+    delete d1, d2, d3;
     return 0;
 }
