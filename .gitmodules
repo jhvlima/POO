@@ -1,6 +1,6 @@
 [submodule "trab1poo"]
 	path = trab1poo
-	url = https://github.com/jhvlima/trab1poo
+	url = https://github.com/jhvlima/trab1poo.git
 [submodule "trab2poo"]
 	path = trab2poo
-	url = https://github.com/jhvlima/trab2poo.git
+	url = https://github.com/gabrieldealbuquerque/trab2poo
